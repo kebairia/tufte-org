@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------
 #+LATEX_CLASS:      tufte-handout
 
-# #+SETUPFILE:        ./lib/tufte-org.setup
+#+SETUPFILE:        ./lib/tufte-org.setup
 # #+INCLUDE:          ./lib/gls_ac.setup
 # #+INCLUDE:          ./lib/code.inc
 # #+CALL:             init()
@@ -38,32 +38,12 @@ The table of contents belongs between the abstract and the introduction. The max
 #+latex_header: \pagenumbering{arabic}
 
 * Overview                                                           :ignore:
-:PROPERTIES:
-:ID: intro
-:END:
-#+include: ./chps/intro.org
-* Chapter 2
-:PROPERTIES:
-:ID:       config
-:ALT_TITLE: Configuration
-:END:
-#+include: ./chps/chp2/config.org
-* Chapter 3
-:PROPERTIES:
-:ID:       cons
-:ALT_TITLE: Conclusion
-:END:
-#+include: ./chps/chp3/cons.org
-* Appendix                                                           :ignore:
-#+begin_export latex
-\appendix
-#+end_export
-** Emacs and Org mode
-:PROPERTIES:
-:ID:       emacs_org
-:ALT_TITLE: Emacs and Org mode
-:END:
-#+include: ./chps/emacs_org-mode.org
+** Introduction
+datelines tunneled snickered differentiation sundering commercialism staunchest wobbling joyousness
+quivers hummus's slaveholder's masturbation L's scepter elm's julienne monotonically vaguely redolent
+hump delphinium's underarm Chile's peahens topper's mercenaries Cardin coalface deluge's wort
+supernal ascribe podcast's skittered whit microorganisms cockpits indenturing cautioned 
+
 * Backmatter                                                         :ignore:
 #+begin_export latex
 #+end_export
