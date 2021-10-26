@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------
-#+LATEX_CLASS:      tufte-org
+#+LATEX_CLASS:      tufte-handout
 
-#+SETUPFILE:        ./lib/tufte-org.setup
+# #+SETUPFILE:        ./lib/tufte-org.setup
 # #+INCLUDE:          ./lib/gls_ac.setup
 # #+INCLUDE:          ./lib/code.inc
 # #+CALL:             init()
