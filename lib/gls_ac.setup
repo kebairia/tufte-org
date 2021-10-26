@@ -1,0 +1,78 @@
+# -*- mode: org; -*-
+# -------------------------------------
+#  Kebairia Zakaria
+#  Glossaries and acronyms setup
+#  Master: Serverless Edge computing
+# -------------------------------------
+* Macros                                                           :noexport:
+#+MACRO: acronym #+latex_header: \newacronym[description={$1}]{$2}{$2}{$3}
+#+MACRO: glossary #+latex_header: \newglossaryentry{$1}{name={$2},description={$3},sort={$4}}
+
+#+latex_header: \usepackage{glossaries}
+#+latex_header: \makeglossaries
+* COMMENT Glossaries and Acronyms                                          :noexport:
+#+begin_export latex
+\newglossaryentry{LaTeX}{%
+  name        = {\LaTeX},
+  description = {A document preparation system},
+  sort        = {LaTeX},
+}
+#+end_export
+
+#+begin_export latex
+\newglossaryentry{xelatex}{%
+  name        = {\XeLaTex},
+  description = {An All in one \LaTeX compiler},
+  sort        = {LaTeX},
+}
+#+end_export
+
+#+begin_export latex
+\newglossaryentry{lualatex}{%
+  name        = {\LuaLaTex},
+  description = {Another \LaTeX compiler},
+  sort        = {LaTeX},
+}
+#+end_export
+#+begin_export latex
+\newglossaryentry{Real numbers}{%
+  name        = {$\real$},
+  description = {The set of real numbers},
+  sort        = {Real numbers},
+}
+#+end_export
+{{{glossaryentry(fog,FOG, FOG layer , something )}}}
+
+* Glossaries                                                       :noexport:
+{{{glossary(latex,\LaTeX,A document preparation system,LaTeX)}}}
+* Acronyms                                                         :noexport:
+{{{acronym(Operating System,OS,OS,os)}}} 
+{{{acronym(Internet Protocol,IP,IP,ip)}}}
+{{{acronym(Transmission Control Protocol,TCP,TCP,tcp)}}}
+{{{acronym(Hypertext Transfer Protocol,HTTP,HTTP,http}}}
+{{{acronym(Internet of Things,IoT,IoT,iot)}}}
+ 
+* Description                                              :noexport:ARCHIVE:
+#  Here is an example acronym definition
+#  #+latex_header_extra: \newacronym{lvm}{LVM}{Logical Volume Manager}
+
+#  New links defined:
+#  gls:name A reference to the glossary entry NAME.
+#  glspl:name The plural version of the entry
+#  Gls:name Capitalized glossary entry
+#  Glspl: Capitalized, plural glossary entry
+#  [[gslink:name][alternate text]]
+#  glssymbol:name Outputs the symbol value of the glossary entry settings.
+#  glsdesc:name  The description of name
+
+#  The links export to LaTeX. You can click on the link and jump to the
+#  definition. The links have tooltips for the definitions.
+
+#  Acronym links
+#  acrshort:label
+#  acrfull:label
+#  acrlong:label
+#  ac:label  (exports to \gls{label})
+#  Ac:label  (exports to \Gls{label})
+#  acp:label (exports to \glspl{label})
+#  Acp:label (exports to \Glspl{label})

@@ -1,0 +1,15 @@
+#  -*- mode: org; -*-
+
+#+latex_header: \pagenumbering{roman}
+#+begin_export latex
+\begin{center}
+\begin{large}
+  \textsc{Abstract}
+\end{large}
+\end{center}
+%
+\noindent
+%
+#+end_export
+Put your abstract here
+{{{clearpage}}}

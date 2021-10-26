@@ -1,0 +1,89 @@
+# -*- mode: org; -*-
+# -------------------------------------
+#  Kebairia Zakaria
+#  MY TITLE
+#  Master: Serverless Edge computing
+# -------------------------------------
+* images                                                             :ignore:
+
+\selectlanguage{english}
+\begin{titlepage}
+#+attr_latex: :width 10cm
+[[file:ESI-SBA_title.png]]
+
+#+attr_latex: :width 3cm
+[[file:~/dox/wrk/pfe/docs/pfe_thesis/figures/dsg/esi-sba-logo-black.png]]
+# [[file:~/dox/wrk/pfe/docs/thesis_infra/figures/dsg/esi-sba-logo-black.png]]
+* 1st Page                                                           :ignore:
+#+begin_export latex
+%\clearpage
+\thispagestyle{empty}
+\begin{center}
+\textbf {Final Year Thesis}\\[0.2cm]
+
+{To obtain deploma of \textbf {Master}\\domain : \textbf {Computer Science}\\Specialty : \textbf {Computer System Engineering}}\\[0.2cm]
+
+%****************TITRE**************%
+\centering
+\end{center}
+
+#+end_export
+* TITLE                                                        :ignore:
+#+begin_export latex
+  %
+  \phantom{}
+  \vfill 
+  %
+  \begin{center}
+  \normalsize Theme\\[0.3cm]
+    \begin{singlespace*}
+      \begin{Huge}
+          \textbf{Edge and Fog Computing\\
+          Based Video Management System}
+      \end{Huge}
+      %
+      \vskip 0.25cm
+      \vskip 0.25cm
+      %
+#+end_export
+* Presented by                                                       :ignore:
+#+begin_export latex
+
+%************Auteurs et encadrants*************%
+
+\normalsize \emph{Presented by :\\[0.1cm]}
+%\begin{center}
+%   \begin{itemize}
+ %      \item Mr BAALI Ahmed
+  %      \item Mr SAFARI Moubarek
+  % \end{itemize}
+   %\end{center}
+   \normalsize\textbf{Mr Kebairia Zakaria}\\ \&\\ \textbf{Mr Khadraoui Alaa\\[0.1cm]}
+    \end{singlespace*}
+  \end{center}
+  %
+  \vfill
+  %
+
+
+\begin{tabular}{llll}
+& Graduate in : 07 September 2021     &  & 	in front of jury composed by : \\[0.1cm]
+
+	& -	Pr. M.A.Boudhir 	&  & 		President\\
+	& -	Pr. A. Rahmoun		&  &  	        Supervisor\\
+	& -	Dr H. Bensenane		&  &		Co-Supervisor\\
+	& -	Dr. A.Malki             &  &            Examinator \\
+ 
+\end{tabular}
+%%   \begin{singlespace*}
+%%     Supervisors:            Pr. A. Rahmoun\\
+%%     Co-supervisor:          Dr H. Bensenane
+%%   \end{singlespace*}
+%% \
+\end{titlepage}
+
+\newpage
+\null
+\thispagestyle{empty}
+\newpage
+#+end_export

@@ -1,0 +1,116 @@
+# ---------------------------------------------------------------------
+#+LATEX_CLASS:      tufte-org
+
+#+SETUPFILE:        ./lib/tufte-org.setup
+# #+INCLUDE:          ./lib/gls_ac.setup
+# #+INCLUDE:          ./lib/code.inc
+# #+CALL:             init()
+#+LaTeX_HEADER:     \bibliography{~/org/bib/refs}
+# ---------------------------------------------------------------------
+#+STARTUP:          content showstars indent
+#+EXCLUDE_TAGS:     journal noexport
+#+EXPORT_FILE_NAME: tufte-org.pdf
+# ---------------------------------------------------------------------
+
+* Frontmater                                                         :ignore:
+
+#+BEGIN_EXPORT latex
+\frontmatter
+\glsenablehyper
+#+END_EXPORT
+
+# #+include: ./chps/title.org
+# #+include: ./chps/abs.org
+# #+include: ./chps/ack.org
+* Mainmatter                                                         :ignore:
+#+begin_comment
+
+The table of contents is where you list the chapters and major sections of your dissertation, along with their page numbers.
+A clear and well-formatted contents page is essential as it indicates a quality paper is to follow.
+
+The table of contents belongs between the abstract and the introduction. The maximum length should be two pages.
+[[https://www.scribbr.com/dissertation/table-of-contents/][Dissertation table of contents]]
+#+end_comment
+#+BEGIN_EXPORT latex
+\tableofcontents
+\mainmatter
+#+END_EXPORT
+#+latex_header: \pagenumbering{arabic}
+
+* Overview                                                           :ignore:
+:PROPERTIES:
+:ID: intro
+:END:
+#+include: ./chps/intro.org
+* Chapter 2
+:PROPERTIES:
+:ID:       config
+:ALT_TITLE: Configuration
+:END:
+#+include: ./chps/chp2/config.org
+* Chapter 3
+:PROPERTIES:
+:ID:       cons
+:ALT_TITLE: Conclusion
+:END:
+#+include: ./chps/chp3/cons.org
+* Appendix                                                           :ignore:
+#+begin_export latex
+\appendix
+#+end_export
+** Emacs and Org mode
+:PROPERTIES:
+:ID:       emacs_org
+:ALT_TITLE: Emacs and Org mode
+:END:
+#+include: ./chps/emacs_org-mode.org
+* Backmatter                                                         :ignore:
+#+begin_export latex
+#+end_export
+
+#+BEGIN_EXPORT latex
+% This ensures that the subsequent sections are being included as root
+% items in the bookmark structure of your PDF reader.
+\bookmarksetup{startatroot}
+\backmatter
+\begingroup
+    \let\clearpage\relax
+    \glsaddall
+    \printglossary[type=\acronymtype]
+    \newpage
+    \printglossary
+\endgroup
+\printindex
+#+END_EXPORT
+
+* Bibliography                                                       :ignore:
+#+begin_export latex
+\printbibliography
+%% \bibliographystyle{unsrt}
+%% \bibliography{./lib/refs}
+#+end_export
+# #+LATEX_HEADER:     \bibliography{./lib/refs}
+
+* Build                                                            :noexport:
+
+Bind derivatives change variable values *locally* on export.
+These two are because I'm defining the title and toc manually using latex, so I don't want org-latex to take care of that.
+#+BIND: org-latex-title-command ""
+#+BIND: org-latex-toc-command " "
+# This is so that src code blocks get src highlighting from the minted package.
+#+BIND: org-latex-listings minted
+This beautifies table borders. It will only work if the booktabs package is loaded, which I do in the setup file.
+#+BIND: org-latex-tables-booktabs t
+And this configuration increases the default width of images, so that they are larger and more readable on print.
+#+BIND: org-latex-image-default-width ".97\\linewidth"
+put caption above the table
+#+BIND: org-export-latex-table-caption-above nil
+
+# Local Variables:
+# mode: org
+# org-export-allow-bind-keywords: t
+# eval: (setq display-fill-column-indicator-column 100)
+# eval: (display-fill-column-indicator-mode)
+# eval: (org-id-update-id-locations)
+# eval: (flyspell-mode t)
+# End:

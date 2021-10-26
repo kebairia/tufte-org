@@ -1,0 +1,18 @@
+#  -*- mode: org; -*-
+
+* Acknowledgment                                                         :ignore:
+#+begin_export latex
+\begin{center}
+    \section*{Acknowledgment}
+\end{center}
+%% \addcontentsline{toc}{section}{\protect\numberline{}Acknowledgement}
+
+#+end_export
+Put your acknowledgement here
+
+{{{newline}}}
+#+begin_flushright
+Any sufficiently advanced technology is indistinguishable from magic.
+/---Arthur C. Clarke/
+#+end_flushright
+{{{clearpage}}}
