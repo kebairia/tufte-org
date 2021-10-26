@@ -260,15 +260,16 @@ Also reduce the font-size
 # #+latex_header:   \usepackage[oldstyle,scale=0.7]{Sudo}
 # #+latex_header:   \singlespacing
 # #+latex_header: \fi
-# # #+latex_header: \setmonofont{Sudo}
+
+# #+latex_header: \setmonofont{Sudo}
 
 *** Improve Part/Chapter font colors and font size
 The following commands make chapter numbers hd-red, which look like the Donders color.
-#+latex_header: \makeatletter
-#+latex_header: \renewcommand{\partformat}{\huge\partname~\color{hd-red}\thepart\autodot}
-#+latex_header: \renewcommand*{\chapterformat}{  \mbox{\chapappifchapterprefix{\nobreakspace}{\color{hd-red}\fontsize{50}{55}\selectfont\thechapter}\autodot\enskip}}
-#+latex_header: \renewcommand\@seccntformat[1]{\color{hd-red} {\csname the#1\endcsname}\hspace{0.3em}}
-#+latex_header: \makeatother
+# #+latex_header: \makeatletter
+# #+latex_header: \renewcommand{\partformat}{\huge\partname~\color{hd-red}\thepart\autodot}
+# #+latex_header: \renewcommand*{\chapterformat}{  \mbox{\chapappifchapterprefix{\nobreakspace}{\color{hd-red}\fontsize{50}{55}\selectfont\thechapter}\autodot\enskip}}
+# #+latex_header: \renewcommand\@seccntformat[1]{\color{hd-red} {\csname the#1\endcsname}\hspace{0.3em}}
+# #+latex_header: \makeatother
 
 ** Possible Equation improvements
 
@@ -289,7 +290,7 @@ The minted package is used for highlighting source code.
   - ~linenos~: line numbers
   - ~autogobble~:
   - ~frame=single~: braw a box around the code
-#+latex_header: \setminted{autogobble=true,fontsize=\small,baselinestretch=0.8,breaklines,linenos}
+#+latex_header: \setminted{autogobble=true,fontsize=\small,baselinestretch=0.8,breaklines,linenos,frame=single}
 #+latex_header: \setminted[python]{python3=true,tabsize=4}
 # #+latex_header: \setminted{bgcolor=backcolour}
 - syntax highlighting style: trac
