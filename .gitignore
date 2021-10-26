@@ -1,2 +1,4 @@
 /tufte-org.pdf
 /sample-handout.tex
+/tufte-org.*
+!/tufte-org.tex
